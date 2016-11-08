@@ -1,0 +1,39 @@
+<apex:page standardController="Feedback__c" extensions="feedbackcontroller_AC" >
+    <apex:form >
+    <apex:pageBlock >
+        <apex:outputLabel style="color:green;font-size:150%;"> Presentation Feedback Form</apex:outputLabel>
+        <apex:pageBlockSection >  	
+          <apex:inputField value="{!feedback.Feedback_for__c}"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock >
+    	<apex:pageBlockSection columns="1" title="Presentation Skills">
+            <apex:inputField value="{!feedback.Eye_Contact__c}"/>
+            <apex:inputField value="{!feedback.Style_of_Presentation__c}"/>
+            <apex:inputField value="{!feedback.Time_Keeping__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection columns="1" title="Voice">
+            <apex:inputField value="{!feedback.Clariy__c}"/>
+            <apex:inputField value="{!feedback.Volume__c}"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection columns="1" title="Content/Material">
+            <apex:inputField value="{!feedback.Structure__c}"/>
+            <apex:inputField value="{!feedback.Use_of_visual_aids__c}"/>
+            <apex:inputField value="{!feedback.Appropriateness__c}"/>
+            <apex:inputField value="{!feedback.Amount_of_Material__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection columns="1" title="Post Presentation Discussion">
+            <apex:inputField value="{!feedback.Handling_Questions__c}"/>
+            <apex:inputField value="{!feedback.Listening__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+        	
+            <apex:inputField value="{!feedback.Comments__c}" />
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+   
+        <apex:commandButton action="{!SaveandClose}" value="Save & Close" />
+    
+    </apex:form>
+</apex:page>

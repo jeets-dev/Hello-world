@@ -1,0 +1,11 @@
+<apex:component controller="getAccDetailsCtrl" Access="global">
+      <apex:attribute name="ToId" type="ID" assignTo="{!accID}" description=" Account id "/>
+      
+      <apex:outputText > {!message}</apex:outputText>
+      
+      <apex:repeat value="{!accContacts}" var="cons">
+              <br/> <apex:outputField value="{!cons.id}"/> '   '
+              <apex:outputField value="{!cons.name}"/> '   '
+              <apex:outputField value="{!cons.email}"/>  
+      </apex:repeat> 
+</apex:component>

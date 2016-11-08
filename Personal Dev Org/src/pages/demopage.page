@@ -1,0 +1,34 @@
+<apex:page controller="mycontroller_AC">
+     
+     <apex:form >
+             
+             <apex:pageblock id="pTable" >
+                 <apex:pageblockSection >
+                         <apex:selectList id="selectedAcc" size="1" value="{!selectedAccountId}" onChange="popOppListAF()">
+                             <apex:selectOptions value="{!accOptions}" > </apex:selectOptions>
+                         </apex:selectList>
+                 </apex:pageblockSection>
+                 
+                 <apex:pageblockSection >
+                     <apex:outputPanel rendered="{!if(relatedOpps.size == 0,true,false)}" >
+                         <apex:outputText > No related Opportunity found </apex:outputText>
+                     </apex:outputPanel>
+                     
+                     <apex:pageBlockTable rendered="{!if(relatedOpps.size > 0,true,false)}" var = "opps" value="{!relatedOpps}" >
+                         <apex:column >
+                             <apex:outputText value="{!opps.Id}"></apex:outputText>
+                         </apex:column>
+                          <apex:column >
+                             <apex:outputText value="{!opps.Name}"></apex:outputText>
+                         </apex:column>
+                     </apex:pageBlockTable>
+                 </apex:pageblockSection>
+             </apex:pageblock>
+             
+             <apex:actionFunction action="{!populateOppList}" name="popOppListAF" reRender="pTable">
+                
+             </apex:actionFunction>
+     </apex:form>
+     
+  
+</apex:page>

@@ -1,0 +1,37 @@
+<apex:page >
+  
+  <style type = "text/css">
+      .heading{
+          font-face: bold;
+          color : blue;
+          font-size : 300%;
+      }
+  </style>
+  <script type= "text/javascript"
+      src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBkJ-5lv_6I1hiLxIFS95g8bvMXGTM1ddY" >
+  </script>
+  
+  <script type="text/javascript">
+      function initialize(){
+       var mapOptions = {
+          center: { lat: -34.397, lng: 150.644},
+          zoom: 8
+        };
+              
+          variable map = new google.maps.Map(document.getElementById('mapcanvas'), mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+  <body>
+      <apex:pageBlock >
+          <apex:pageBlockSection >
+              <apex:outputLabel styleClass="heading"> Explore in Map : </apex:outputLabel>
+          </apex:pageBlockSection>
+          <apex:pageBlockSection >
+              <div id = "mapcanvas"> </div>
+          </apex:pageBlockSection>          
+      </apex:pageBlock>
+      
+  </body>
+  
+</apex:page>

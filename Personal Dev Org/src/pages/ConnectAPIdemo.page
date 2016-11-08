@@ -1,0 +1,13 @@
+<apex:page controller="connectAPIdemoclass_c">
+  <apex:form >
+  <apex:pageblock >
+      <apex:pageBlockSection >
+          
+          <apex:pageBlockSectionItem >
+              <apex:commandButton action="{!updateFeed}" value="Update Feed"/>
+          </apex:pageBlockSectionItem>
+          
+      </apex:pageBlockSection>
+  </apex:pageblock>
+ </apex:form>
+</apex:page>

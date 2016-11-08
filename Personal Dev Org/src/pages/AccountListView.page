@@ -1,0 +1,17 @@
+<apex:page standardController="Account" recordSetVar="accounts" tabstyle="Account" extensions="AccountPagination"  sidebar="false">
+  <apex:pageblock >
+  <apex:form >
+      <apex:outputlabel > View Accounts: </apex:outputlabel>
+      <apex:pageblocksection >
+          <apex:datalist var="a" value="{!accountPagination}" id="viewlist" type="1" >
+              {!a.name}
+          </apex:datalist>
+      </apex:pageblocksection>
+      <apex:panelgrid columns="2">
+          <apex:commandbutton Action="{!Next}" Value="Next"/>
+          <apex:commandbutton Action="{!Previous}" Value="Previous"/>
+      </apex:panelgrid>
+     
+  </apex:form>
+  </apex:pageblock>
+</apex:page>

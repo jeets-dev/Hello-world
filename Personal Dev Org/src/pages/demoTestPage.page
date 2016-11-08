@@ -1,0 +1,7 @@
+<apex:page controller="demoTestController_AC" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <apex:pageMessages ></apex:pageMessages>
+  <h1>Congratulations</h1>
+  This is your new Page: demoTestPage
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

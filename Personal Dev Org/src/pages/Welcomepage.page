@@ -1,0 +1,9 @@
+<apex:page controller="Welcomepagectlr" >
+  
+  <h1>Welcome</h1>
+  <apex:form >
+  <apex:pageBlock >
+      <apex:commandLink value="Give Feedback" action="{!gotoFeedbackPage}"  />
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

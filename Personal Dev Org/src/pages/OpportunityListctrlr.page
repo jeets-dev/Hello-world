@@ -1,0 +1,10 @@
+<apex:page standardController="Opportunity" recordSetVar="oppties" >
+  	<apex:messages />
+    <apex:pageBlock >
+    <apex:pageBlockTable value="{!oppties}" var="ops">
+        <apex:column value="{!ops.name}" />
+        <apex:column value="{!ops.createddate}" />
+    
+    </apex:pageBlockTable>
+       </apex:pageBlock>
+</apex:page>

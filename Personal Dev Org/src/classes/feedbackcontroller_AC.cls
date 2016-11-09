@@ -1,3 +1,6 @@
+/*
+Author: Jitendra Kumar
+*/
 public class feedbackcontroller_AC {
     public Feedback__c feedback{get;set;}
     public feedbackcontroller_AC(Apexpages.StandardController ctrlr){

@@ -1,3 +1,6 @@
+/*
+Author: Jitendra Kumar
+*/
 public with sharing class AttachmentUploadController 
 {
     public String parentId {get;set;}
